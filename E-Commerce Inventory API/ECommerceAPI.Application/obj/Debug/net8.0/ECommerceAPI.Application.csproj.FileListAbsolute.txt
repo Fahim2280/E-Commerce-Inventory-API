@@ -1,0 +1,12 @@
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Application.deps.json
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Application.dll
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Application.pdb
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.AssemblyInfoInputs.cache
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.AssemblyInfo.cs
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.csproj.CoreCompileInputs.cache
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.sourcelink.json
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.dll
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\refint\ECommerceAPI.Application.dll
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.pdb
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ref\ECommerceAPI.Application.dll

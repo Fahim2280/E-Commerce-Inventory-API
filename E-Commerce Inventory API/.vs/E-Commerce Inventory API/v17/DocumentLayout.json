@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF3A4E76-35AF-48B9-AA4E-43B3AC6437CB}|ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|d:\\github\\e-commerce-inventory-api\\e-commerce inventory api\\ecommerceapi.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF3A4E76-35AF-48B9-AA4E-43B3AC6437CB}|ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:ecommerceapi.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F854FC85-CC57-4BDB-804D-39FF413BD976}|ECommerceAPI.Application\\ECommerceAPI.Application.csproj|d:\\github\\e-commerce-inventory-api\\e-commerce inventory api\\ecommerceapi.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F854FC85-CC57-4BDB-804D-39FF413BD976}|ECommerceAPI.Application\\ECommerceAPI.Application.csproj|solutionrelative:ecommerceapi.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2C07302-5B5D-4F08-A41C-AD673C193C4F}|ECommerceAPI.Domain\\ECommerceAPI.Domain.csproj|d:\\github\\e-commerce-inventory-api\\e-commerce inventory api\\ecommerceapi.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2C07302-5B5D-4F08-A41C-AD673C193C4F}|ECommerceAPI.Domain\\ECommerceAPI.Domain.csproj|solutionrelative:ecommerceapi.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +39,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI.Infrastructure\\Class1.cs",
+              "ToolTip": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "ECommerceAPI.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:20:01.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI.Application\\Class1.cs",
+              "ToolTip": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Application\\Class1.cs",
+              "RelativeToolTip": "ECommerceAPI.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:19:38.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI.Domain\\Class1.cs",
+              "ToolTip": "D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.Domain\\Class1.cs",
+              "RelativeToolTip": "ECommerceAPI.Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:19:14.961Z",
+              "EditorCaption": ""
             }
           ]
         }
