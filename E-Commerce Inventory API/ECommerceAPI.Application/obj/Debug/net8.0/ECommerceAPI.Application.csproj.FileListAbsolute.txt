@@ -10,3 +10,9 @@ D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Applica
 D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\refint\ECommerceAPI.Application.dll
 D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.pdb
 D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ref\ECommerceAPI.Application.dll
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Application.runtimeconfig.json
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Domain.dll
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\bin\Debug\net8.0\ECommerceAPI.Domain.pdb
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.csproj.AssemblyReference.cache
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerc.F181CD37.Up2Date
+D:\GitHub\E-Commerce-Inventory-API\E-Commerce Inventory API\ECommerceAPI.Application\obj\Debug\net8.0\ECommerceAPI.Application.genruntimeconfig.cache
