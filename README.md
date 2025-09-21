@@ -1,6 +1,6 @@
 # E-Commerce Inventory API
 
-A comprehensive RESTful API for e-commerce inventory management built with ASP.NET Core 8, featuring JWT authentication, image upload capabilities, and a clean architecture design.
+A comprehensive RESTful API for e-commerce inventory management built with ASP.NET Core 8, featuring JWT authentication, image upload capabilities, and a Domain-Driven Design (DDD) layered, Unity of work, Repository pattern.
 
 ## 🚀 Features
 
