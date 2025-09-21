@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
+﻿﻿﻿﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -68,6 +68,21 @@ namespace ECommerceAPI.API.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "An error occurred while retrieving products" });
+            }
+        }
+
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<ProductDto>>> SearchProducts([FromQuery] string q)
+        {
+            try
+            {
+                var products = await _productService.SearchProductsAsync(q);
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error searching products with keyword: {Keyword}", q);
+                return StatusCode(500, new { message = "An error occurred while searching products", details = ex.Message });
             }
         }
 

@@ -67,6 +67,28 @@ namespace ECommerceAPI.Application.Services
             return productDtos;
         }
 
+        public async Task<IEnumerable<ProductDto>> SearchProductsAsync(string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+                return await GetAllProductsAsync();
+
+            var products = await _unitOfWork.Products.FindAsync(p => 
+                p.Name.ToLower().Contains(keyword.ToLower()) || 
+                (p.Description != null && p.Description.ToLower().Contains(keyword.ToLower())));
+                
+            var productDtos = new List<ProductDto>();
+
+            foreach (var product in products)
+            {
+                var category = await _unitOfWork.Categories.GetByIdAsync(product.CategoryId);
+                var productDto = _mapper.Map<ProductDto>(product);
+                productDto.CategoryName = category?.Name;
+                productDtos.Add(productDto);
+            }
+
+            return productDtos;
+        }
+
         public async Task<ProductDto> CreateProductAsync(CreateProductDto createProductDto)
         {
             var category = await _unitOfWork.Categories.GetByIdAsync(createProductDto.CategoryId);
