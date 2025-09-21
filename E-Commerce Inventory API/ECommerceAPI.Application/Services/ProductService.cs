@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿﻿﻿using AutoMapper;
 using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Interfaces;
@@ -14,11 +14,13 @@ namespace ECommerceAPI.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IImageService _imageService;
 
-        public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductService(IUnitOfWork unitOfWork, IMapper mapper, IImageService imageService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _imageService = imageService;
         }
 
         public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
@@ -31,6 +33,13 @@ namespace ECommerceAPI.Application.Services
                 var category = await _unitOfWork.Categories.GetByIdAsync(product.CategoryId);
                 var productDto = _mapper.Map<ProductDto>(product);
                 productDto.CategoryName = category?.Name;
+                
+                // Set ImageUrl if ImagePath exists
+                if (!string.IsNullOrEmpty(product.ImagePath))
+                {
+                    productDto.ImageUrl = _imageService.GetImageUrl(product.ImagePath);
+                }
+                
                 productDtos.Add(productDto);
             }
 

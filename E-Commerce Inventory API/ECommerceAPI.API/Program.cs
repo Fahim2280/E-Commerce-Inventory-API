@@ -53,6 +53,7 @@ namespace ECommerceAPI.API
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IImageService, ImageService>();
 
             // JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -95,7 +96,7 @@ namespace ECommerceAPI.API
                 {
                     Title = "E-Commerce Inventory API",
                     Version = "v1",
-                    Description = "A RESTful API for e-commerce inventory management",
+                    Description = "A RESTful API for e-commerce inventory management with image upload support",
                     Contact = new OpenApiContact
                     {
                         Name = "Your Name",
@@ -103,7 +104,10 @@ namespace ECommerceAPI.API
                     }
                 });
 
-              
+                // Enable file upload support in Swagger UI
+                c.OperationFilter<FileUploadOperationFilter>();
+
+                // Try to include XML comments
                 try
                 {
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -115,7 +119,7 @@ namespace ECommerceAPI.API
                 }
                 catch
                 {
-                    
+                    // Ignore if XML comments file is not found
                 }
 
                 // JWT Authentication in Swagger
@@ -169,6 +173,10 @@ namespace ECommerceAPI.API
             }
 
             app.UseHttpsRedirection();
+            
+            // Enable static file serving for images
+            app.UseStaticFiles();
+            
             app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();

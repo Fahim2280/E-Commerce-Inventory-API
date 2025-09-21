@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "oBsJAgiMTTXwFijbuKav4rPo8TS/YjKLRUlPB8TA5V8=",
-  "Source": "ECommerceAPI.API",
-  "BasePath": "_content/ECommerceAPI.API",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"1FZZ6ZQ5IPf0JqAfiuomVfc+KYS5KJnvzaVqBiWsoRU=","Source":"ECommerceAPI.API","BasePath":"_content/ECommerceAPI.API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"ECommerceAPI.API\\wwwroot","Source":"ECommerceAPI.API","ContentRoot":"D:\\GitHub\\E-Commerce-Inventory-API\\E-Commerce Inventory API\\ECommerceAPI.API\\wwwroot\\","BasePath":"_content/ECommerceAPI.API","Pattern":"**"}],"Assets":[],"Endpoints":[]}

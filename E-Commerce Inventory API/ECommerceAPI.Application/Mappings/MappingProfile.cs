@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿﻿using AutoMapper;
 using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities;
 using System;
@@ -25,6 +25,8 @@ namespace ECommerceAPI.Application.Mappings
             CreateMap<Product, ProductDto>();
             CreateMap<CreateProductDto, Product>();
             CreateMap<UpdateProductDto, Product>();
+            CreateMap<CreateProductWithFileDto, Product>();
+            CreateMap<UpdateProductWithFileDto, Product>();
         }
     }
 }
