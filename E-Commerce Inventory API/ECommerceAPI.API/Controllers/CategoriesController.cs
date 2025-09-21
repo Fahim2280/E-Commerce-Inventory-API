@@ -1,4 +1,4 @@
-﻿﻿using ECommerceAPI.Application.DTOs;
+﻿﻿﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +7,6 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;

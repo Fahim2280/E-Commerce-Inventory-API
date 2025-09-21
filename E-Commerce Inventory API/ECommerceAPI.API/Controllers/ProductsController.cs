@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Application.Services;
 using ECommerceAPI.Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -8,7 +8,6 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;

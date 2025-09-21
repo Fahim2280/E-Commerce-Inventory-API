@@ -1,4 +1,4 @@
-﻿﻿﻿using System;
+﻿﻿﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -37,15 +37,8 @@ namespace ECommerceAPI.Application.DTOs
     public class AuthResponseDto
     {
         public string AccessToken { get; set; }
-        public string RefreshToken { get; set; }
         public DateTime Expires { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
-    }
-
-    public class RefreshTokenDto
-    {
-        [Required(ErrorMessage = "Refresh token is required")]
-        public string RefreshToken { get; set; }
     }
 }

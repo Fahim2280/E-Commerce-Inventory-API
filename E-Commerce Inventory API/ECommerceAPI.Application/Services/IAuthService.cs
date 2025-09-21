@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Application.DTOs;
+﻿﻿using ECommerceAPI.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,5 @@ namespace ECommerceAPI.Application.Services
     {
         Task<AuthResponseDto> RegisterAsync(RegisterDto registerDto);
         Task<AuthResponseDto> LoginAsync(LoginDto loginDto);
-        Task<AuthResponseDto> RefreshTokenAsync(RefreshTokenDto refreshTokenDto);
-        Task<bool> RevokeTokenAsync(string refreshToken);
     }
 }

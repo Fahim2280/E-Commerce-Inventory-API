@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Application.DTOs;
+﻿﻿﻿﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -47,7 +47,7 @@ namespace ECommerceAPI.Application.Services
             await _unitOfWork.Users.AddAsync(user);
             await _unitOfWork.SaveAsync();
 
-            return await GenerateAuthResponse(user);
+            return GenerateAuthResponse(user);
         }
 
         public async Task<AuthResponseDto> LoginAsync(LoginDto loginDto)
@@ -56,49 +56,17 @@ namespace ECommerceAPI.Application.Services
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
                 throw new UnauthorizedAccessException("Invalid email or password");
 
-            return await GenerateAuthResponse(user);
+            return GenerateAuthResponse(user);
         }
 
-        public async Task<AuthResponseDto> RefreshTokenAsync(RefreshTokenDto refreshTokenDto)
-        {
-            var user = await _unitOfWork.Users.SingleOrDefaultAsync(u => u.RefreshToken == refreshTokenDto.RefreshToken);
-
-            if (user == null || user.RefreshTokenExpiry <= DateTime.UtcNow)
-                throw new UnauthorizedAccessException("Invalid or expired refresh token");
-
-            return await GenerateAuthResponse(user);
-        }
-
-        public async Task<bool> RevokeTokenAsync(string refreshToken)
-        {
-            var user = await _unitOfWork.Users.SingleOrDefaultAsync(u => u.RefreshToken == refreshToken);
-            if (user == null) return false;
-
-            user.RefreshToken = null;
-            user.RefreshTokenExpiry = DateTime.UtcNow;
-            _unitOfWork.Users.Update(user);
-            await _unitOfWork.SaveAsync();
-
-            return true;
-        }
-
-        private async Task<AuthResponseDto> GenerateAuthResponse(User user)
+        private AuthResponseDto GenerateAuthResponse(User user)
         {
             var accessToken = GenerateAccessToken(user);
-            var refreshToken = GenerateRefreshToken();
             var expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpireMinutes"]));
-
-            user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
-            user.UpdatedAt = DateTime.UtcNow;
-
-            _unitOfWork.Users.Update(user);
-            await _unitOfWork.SaveAsync();
 
             return new AuthResponseDto
             {
                 AccessToken = accessToken,
-                RefreshToken = refreshToken,
                 Expires = expires,
                 Username = user.Username,
                 Email = user.Email
@@ -125,14 +93,6 @@ namespace ECommerceAPI.Application.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
-        }
-
-        private string GenerateRefreshToken()
-        {
-            var randomNumber = new byte[32];
-            using var rng = RandomNumberGenerator.Create();
-            rng.GetBytes(randomNumber);
-            return Convert.ToBase64String(randomNumber);
         }
     }
 }

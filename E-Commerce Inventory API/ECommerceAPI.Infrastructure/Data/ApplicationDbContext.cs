@@ -28,8 +28,6 @@ namespace ECommerceAPI.Infrastructure.Data
                 entity.Property(e => e.Username).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Email).IsRequired().HasMaxLength(255);
                 entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(500); // Set max length for hash
-                entity.Property(e => e.RefreshToken).HasMaxLength(500).IsRequired(false); // Make nullable 
-                entity.Property(e => e.RefreshTokenExpiry).IsRequired(false); // Make nullable
                 entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
 
